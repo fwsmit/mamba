@@ -20,7 +20,7 @@ dependencies = [
   "triton",
   "ninja",
   "einops",
-  "transformers==4.34.1 ",
+  "transformers",
   "packaging",
   "setuptools>=61.0.0",
 ]
