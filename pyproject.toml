@@ -3,39 +3,35 @@ name = "mamba_ssm"
 description = "Mamba state-space model"
 readme = "README.md"
 authors = [
-    { name = "Tri Dao", email = "tri@tridao.me" },
-    { name = "Albert Gu", email = "agu@cs.cmu.edu" }
+  { name = "Tri Dao", email = "tri@tridao.me" },
+  { name = "Albert Gu", email = "agu@cs.cmu.edu" },
 ]
 requires-python = ">= 3.9"
 dynamic = ["version"]
-license = { file = "LICENSE" }  # Include a LICENSE file in your repo
+license = { file = "LICENSE" } # Include a LICENSE file in your repo
 keywords = ["cuda", "pytorch", "state-space model"]
 classifiers = [
-    "Programming Language :: Python :: 3",
-    "License :: OSI Approved :: Apache Software License",
-    "Operating System :: Unix"
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: Apache Software License",
+  "Operating System :: Unix",
 ]
 dependencies = [
-    "torch",
-    "tilelang==0.1.8",
-    "quack-kernels==0.3.1",
-    "triton>=3.5.0",
-    "ninja",
-    "einops",
-    "transformers",
-    "packaging",
-    "setuptools>=61.0.0",
+  "torch",
+  "tilelang==0.1.8",
+  "quack-kernels==0.3.1",
+  "triton>=3.5.0",
+  "ninja",
+  "einops",
+  "transformers",
+  "packaging",
+  "setuptools>=61.0.0",
 ]
 [project.urls]
 Repository = "https://github.com/state-spaces/mamba"
 
 [project.optional-dependencies]
-causal-conv1d = [
-    "causal-conv1d>=1.2.0"
-]
-dev = [
-    "pytest"
-]
+causal-conv1d = ["causal-conv1d>=1.2.0"]
+dev = ["pytest"]
 
 
 [build-system]
@@ -43,10 +39,5 @@ dev = [
 # torch-cpu from PyPI, ignoring the user's CUDA-enabled torch.
 # Users building from source should install torch first, then:
 #   pip install mamba-ssm --no-build-isolation
-requires = [
-    "setuptools>=61.0.0",
-    "wheel",
-    "packaging",
-    "ninja",
-]
+requires = ["setuptools>=61.0.0", "wheel", "packaging", "ninja"]
 build-backend = "setuptools.build_meta"
